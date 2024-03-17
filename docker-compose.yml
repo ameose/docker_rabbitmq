@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  rabbitmq:
+    image: rabbitmq:3.13.0-management
+    container_name: rabbitmq
+    env_file:
+      - ./.env
+    ports:
+      - "5672:5672"     # стандартный порт RabbitMQ
+      - "15672:15672"   # порт для интерфейса управления
+
+
